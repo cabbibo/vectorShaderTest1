@@ -96,11 +96,11 @@ vec3 col1( vec3 ro , vec3 rd ){
 
   vec3 col = vec3( 0. );
   for( int i = 0; i<10; i++){
-    vec3 p = ro + rd * .01 * float( i );
+    vec3 p = ro + rd * .002 * float( i );
 
     float n = fNoise( p );
 
-    col += hsv( n * 200., 1. , 1. )/10. ;
+    col += hsv( n * 200., 1. , 1. ) /10. ;
 
 
   }
@@ -115,9 +115,9 @@ vec3 col2( vec3 ro , vec3 rd ){
   for( int i = 0; i<10; i++){
     vec3 p = ro + rd * .001 * float( i );
 
-    float n = sin( p.x * 200. )+ sin( p.y * 200.);
+    float n = sin( p.x * 2000. )+ sin( p.y * 2000.);
 
-    col += hsv( n * 2. , 1. , 1. ) * n /10. ;
+    col += hsv( n * .1 , 1. , 1. ) * n /10. ;
 
 
   }
@@ -130,7 +130,7 @@ vec3 col3( vec3 ro , vec3 rd ){
 
   vec3 col = vec3( 0. );
   for( int i = 0; i<10; i++){
-    vec3 p = ro + rd * .01 * float( i );
+    vec3 p = ro + rd * .1 * float( i );
 
     float n = fNoise( p * .4 );
 
@@ -149,9 +149,9 @@ vec3 col4( vec3 ro , vec3 rd ){
   for( int i = 0; i<10; i++){
     vec3 p = ro + rd * .1 * float( i );
 
-    float n = fNoise( p  * 20.);
+    float n = fNoise( p  * 2.);
 
-    col += hsv( n  * 200., 1. , 1. )/10. ;
+    col += hsv( n  * 2., 1. , 1. )/10. ;
 
 
   }

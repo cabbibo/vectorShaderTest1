@@ -2,6 +2,9 @@ function beginLoad(){
   loadShaders();
   loadAudio();
   G.logo = loadImage("starFace.jpg");
+
+
+  
   //loadCubeMap();
 }
 
